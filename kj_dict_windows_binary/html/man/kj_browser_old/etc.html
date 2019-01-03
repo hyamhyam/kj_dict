@@ -1,0 +1,41 @@
+<html>
+
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<link href="../../../dict.css" rel=stylesheet type=text/css>
+  <title>KJ_browser</title>
+</head>
+
+<body>
+  <h1>KJ_browser その他 </h1>
+<br>
+<h2>脆弱性に関する情報</h2>
+<p>
+2005.07.20<br>
+「Internet Explorer コンポーネントを使用するアプリケーションにおけるセキュリティゾーンの扱いに関する脆弱性」<br>
+<a href="http://jvn.jp/jp/JVN%23257C6F28/index.html">
+http://jvn.jp/jp/JVN%23257C6F28/index.html</a><br>
+というものがあります。<br>
+<br>
+IEコンポーネントを使用し、かつ<br>
+(1)セキュリティゾーンをプログラム側で変更している場合。<br>
+または<br>
+(2)htmlをいったんローカルファイルに落として再度IEコンポーネントで処理する場合<br>
+などで<br>
+元ページのセキュリティレベルより低いゾーンで実行されてしまうという問題です。<br>
+<br>
+KJ_browser.exe はIEコンポーネントを使用していますが<br>
+上記(1)(2)に該当するような処理は行っていません。<br>
+<br>
+そのため本脆弱性はKJ_browser.exeでは該当しません。<br>
+<span class="com">
+念のため、IEの下にでるステータスバーのゾーン表示は常に確認ください。 <br>
+元ページのゾーンと変わる事はないはずですが。<br>
+</span>
+
+<br>
+# ...と思っていますがもしトンデモナイ誤解などあればご指摘いただければ幸いです。<br>
+<img src="../../img/mail.jpg">
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<html>
+
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<link href="../../../dict.css" rel=stylesheet type=text/css>
+  <title>古い版のKJ_browser (実験的機能)</title>
+</head>
+
+<body>
+  <h1>古い版のKJ_browser (実験的機能)</h1>
+  <div class="topicpathR">
+  <a href="../../index.html" class="nodecoration">top</a>  &gt; 
+  <a href="../index.html" class="nodecoration">KJ_dict マニュアル</a>  &gt; 
+  古い版のKJ_browser 
+  </div>
+
+<p>
+KJ_dictのライブラリ(KJ_dict.dll)を使えば，こんな事もできるという例として作ったものです。<br>
+<br>
+<font color="red">・IE8では動きません。(落ちます)</font><br>
+</p>
+
+
+<h2>説明</h2>
+<p>
+Internet Explorer上の韓国語のページを翻訳するプログラムです。<br>
+<br>
+Yahoo Korea IT Newsページに対して使ってみた例。<br>
+<a href="trans.png">
+<img src="thumbs/trans.jpg"  border="0"></a><br>
+<br>
+<br>
+なお、対象OSはWindows XP, Vistaのみです。
+ <a href="charset.html">それ以外ではフォントが大きく乱れます。</a><br>
+<br>
+・<a href="ie7.png">IE7では動作します。</a><br>
+<br>
+<h2>Windows Vista＋IE7での注意事項</h2>
+<p>
+Vista＋IE7では保護モード:無効→有効の切り替わりで別ウィンドに変わるため、うまく翻訳できません。<br>
+<br>
+Windows VistaでKJ_browserを使いたいという方は以下の回避策をお試しください。<br>
+・KJ_browserで翻訳したいサイトを「信頼済みサイト」に登録する。<br>
+　ただし、本当に信頼できるサイトに限ってください。<br>
+<span class="com">
+「信頼済みサイト」は「保護モード:無効」で動作するからです．．． <br>
+</span>
+<br>
+<br>
+<h2>使い方</h2>
+<p>
+KJ_browser.exe  を実行すると Internet Explorerと下図の小さな<br>
+ウィンドが上がります。<br>
+<br>
+<img src="brow_001.png"><br>
+<br>
+Internet Explorerで翻訳したい韓国のサイトへ移動し、[翻訳] ボタンを押してください。<br>
+<br>
+結構、時間かかります。<br>
+途中で止めたい場合は、[中断]<br>
+<br>
+完全に終了させる場合は、[終了] を押してください。<br>
+[終了] の場合、同時にあげたIEも終了します。<br>
+<br>
+<h2>ページ遷移と再表示について</h2>
+<p>
+ブラウザでページを戻った場合、再度原文が表示されます。<br>
+一度翻訳したページはメモリ中に覚えているので、<br>
+"キャッシュ切り替え"の中の [翻訳文] を押すと、前のページに戻って、<br>
+再度翻訳文を表示させる事ができます。<br>
+[原文]を押すと元に戻ります。<br>
+<br>
+<br>
+<!--
+未翻訳でメモリ中に翻訳文がない場合に[translated]を押すと<br>
+<img src="brow_warn001.png"><br>
+と警告がでます。<br>
+[OK]で戻って、普通に翻訳してください。<br>
+-->
+
+<h2>注意事項</h2>
+<p>
+翻訳できるのは最初に上がったウィンドだけです。<br>
+最初のウィンドから別ウィンドで開いた部分は翻訳できません。<br>
+<br>
+<span class="com">
+ScriptやActiveXなどがあるサイトではうまく動作しない事があります<br>
+フレームの中に本文が入っている場合もだめです。 <br>
+<br>
+翻訳文の方はあいかわらずなので、<br>
+翻訳結果を信用して間違った情報を身につけた、なんて苦情は一切受け付けません。 (^^;<br>
+</span>
+<br>
+
+<br>
+<h2>拡張機能</h2>
+<p>
+普通、使う必要はありませんが、パネル上部で右クリックすると<br>
+[ 拡張機能 ] が選べ、別ダイアログでいくつかの設定変更ができます。<br>
+<br>
+<a href="browser_pref.html">設定変更の詳細</a><br>
+
+<br>
+<br>
+<h2>その他</h2>
+<p>
+・辞書引きの情報はキャッシュに保存します。<br>
+最初の1,2回は翻訳速度が遅いですが、翻訳を繰り返すと速くなっていきます。<br>(プログラムを終了するとキャッシュは破棄)<br>
+
+
+<br>  
+<hr noshade>
+  <div class="topicpathL">
+  <a href="../../index.html" class="nodecoration">top</a>  &gt; 
+  <a href="../index.html" class="nodecoration">KJ_dict マニュアル</a>  &gt; 
+  古い版のKJ_browser 
+  </div>
+
+</body>
+</html>

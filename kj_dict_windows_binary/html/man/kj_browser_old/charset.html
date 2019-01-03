@@ -1,0 +1,40 @@
+<html>
+
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<link href="../../../dict.css" rel=stylesheet type=text/css>
+  <title>フォントが大きく乱れる</title>
+</head>
+
+<body>
+<h2>フォントが大きく乱れる</h2>
+<p>
+
+char-setが韓国語(EUC-KR)のまま、UTF-8を入れ込んでいる影響ではないかと思っています。<br>
+<br>
+Windows XPでも完全ではなく結構乱れます。<br>
+<br>
+以下のようにすると表示がきれいになりますが、同様の事をプログラムでどう実現するか<br>
+まだわかっていません。<br>
+<br>
+・まずKJ_browserで翻訳する。<br>
+・IEの表示→エンコード をUTF-8に。<br>
+・するといったん表示が化け化けになる。<br>
+・そこで "キャッシュ切り替え"の [翻訳文] を押す。<br>
+<br>
+<br>
+単に書き換え前に HTMLDocument.charset = "utf-8" では駄目でした。<br>
+もし回避策をご存知の方、いらっしゃいましたら、ご教示くださればありがたいです。(^^;<br>
+<br>
+<br>
+<!--
+とりあえずは、UTF-8で書かれた韓国語のページに対して使うのがお薦めです。<br>
+（無責任）<br>
+<br>
+UTF-8韓国語ページの例<br>
+<a href="http://news.google.co.kr/nwshp?hl=ko&gl=kr">Google News</a><br>
+<a href="http://ko.wikipedia.org/wiki/%EB%8C%80%EB%AC%B8">Korean Wiki Pedia</a><br>
+-->
+<br>
+<br>
+<br>
