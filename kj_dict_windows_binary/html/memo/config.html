@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>設定ファイルの名称変更   「KJ_form.config」→「KJ_dictform_setting.xml」</title>
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+
+<link href="../../dict.css" rel=stylesheet type=text/css>
+</head>
+
+<body>
+<h1>設定ファイルの名称変更   「KJ_form.config」→「KJ_dictform_setting.xml」</h1>
+<p>
+Ver 2.0.0.0から，開発ツールをVisual C# 2008 Express ＋ .NET Framework 3.5に変えたのですが，<br>
+KJ_form.configの読み込みで落ちるようになってしまいました。<br>
+<br>
+
+<pre>
+message="構成システムを初期化できませんでした。"
+innerException=System.Configuration.ConfigurationErrorsException
+</pre>
+
+<br>
+<p>
+
+アプリケーション構成ファイルのファイル名が<br>
+「*.exe.config が存在しなければ、*.config を読みに行く」<br>
+という動作に変更されたようです。<br>
+<br>
+そのため，KJ_form.configをアプリケーション構成ファイルとして扱いに行き，<br>
+落ちてしまう。<br>
+<br>
+そのため，設定ファイルの名称を変更しました。<br>
+

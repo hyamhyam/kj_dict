@@ -1,0 +1,57 @@
+﻿<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="../dict.css" rel=stylesheet type=text/css>
+</head>
+
+<body>
+<h1>韓国IMEに対する動作不良</h1>
+<p>
+・韓国IMEに対する動作不良対策のため，入力エリアをRichTextBoxからTextBoxに変更しました。<br>
+<br>
+私は気づいてもいない，興味深い問題だったのでここで紹介します<br>
+これは韓国IMEだけで起きる現象です。<br>
+<br>
+「사랑」という単語を入力する場合、こんな順番で入力されるのが正解。
+<pre>
+(ㅅ)
+(사)
+(살)
+사(라)
+사랑
+</pre>
+<br>
+<br>
+<p>
+KJ_form.exe, KJ_form2.exe では入力エリアをrichTextBoxで作成していますが，<br>
+TextChangeイベントで<br>
+String temp = richTextBox.Text;　で持ってきた場合<br>
+文字の組み合わせの状態がおかしくなります<br>
+<br>
+<pre>
+「RichTextBox」の場合；
+(ㅅ)
+(사)
+(살)
+사(라)　→　TextChanged → String temp = richTextBox.Text; → 사라
+사라ㅇ　→　TextChanged → String temp = richTextBox.Text; → 사라ㅇ
+</pre>
+<br>
+<p>
+これはTextBoxであると問題ありません。<br>
+そのため，入力エリアをRichTextBoxからTextBoxに変更しました。<br>
+<br>
+入力エリアをRichTextBoxで定義していたのは，TextBoxだと日本語Windows98上で<br>
+ハングルが表示できなかったためです。<br>
+しかし，そろそろWindows98を対象としなくてよいだろうと考えますので，<br>
+韓国語IMEの問題対策を優先させます<br>
+<br>
+<br>
+<br>
+<br>
+この問題はKim TongHyun氏からご指摘頂きました。<br>
+(Special Thanks to Mr.KimTongHyun)<br>
+<br>
+
+   
+   </p>

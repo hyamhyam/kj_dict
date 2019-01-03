@@ -1,0 +1,130 @@
+<html>
+<head>
+<title>ユーザ辞書</title>
+<link href="../dict.css" rel=stylesheet type=text/css>
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+</head>
+<body>
+<br> 
+<h1>ユーザ辞書</h1>
+  <div class="topicpathR">
+  <a href="index.html" class="nodecoration">top</a>  &gt; 
+  <a href="pw.html" class="nodecoration">パワーユーザ向けのお知らせ</a>  &gt; 
+  ユーザ辞書
+  </div>
+<p>
+
+<!--
+<h2>辞書にユーザが単語を追加する方法</h2>
+<ul>
+<li>KJ_dictのzipファイルを展開した場所にuserdict.txtというファイルを作ります。<br>
+<li>コードセットはUTF-8にしてください。<br> 
+（ userdict.txt.sample に例があります）<br>
+<br>     
+<li>userdict.txt に、<br>      
+<pre>
+ハングル,日本語  
+ハングル,日本語  
+</pre>
+の並びで入力します。    <br>
+
+<br>
+<li>KJ_dictのzipファイルを展開した場所をDOSプロンプトで開き<br>
+userdict.bat を実行する。<br>
+<br>
+（ userdict.bat は serdict.txt の内容を ymlに反映し、<br>
+ さらに、suffix arrayを再作成します。）<br>
+<br>
+</ul>
+<br>
+以上です。これより下は，詳しい説明なので，読まなくても構いません。<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<h2>userdict.bat のしかけ </h2>
+<ul>
+<li>もしも KJ_dict.yml.org がないなら現在の KJ_dict.ymlを KJ_dict.yml.orgとしてコピー<br>
+<br>
+<li>KJ_dict.yml.orgを KJ_dict.ymlへ 上書きコピー<br>
+<li>userdict2yml.exe KJ_dict.ymlを 実行する。<br>
+これはuserdict.txtの内容をKJ_dict.ymlの末尾に追加します。<br>
+<br>
+<li>make_array.exeを使い検索用のsuffix arrayを再作成する。 (時間かかります)<br>
+</ul>
+<pre>
+オリジナル控え
+KJ_dict.yml.org  －－copy－→ KJ_dict.yml  
+                                 ｜
+                                 ｜
+                                userdict2yml.exe 
+                                 ｜
+                                 ｜  <--- 追加 --- userdict.txt
+                                 ｜
+                                 ↓
+                             KJ_dict.yml      
+                                 ｜
+                                 ｜
+                               make_array.exe
+                                 ｜
+                                 ↓
+                             KJ_dict.yml.w.ary , KJ_dict.yml.c.ary  ....    
+                              
+</pre>
+
+<br>
+<br>
+
+<h2>userdict.bat で辞書に単語を追加した場合の注意</h2>
+<ul>
+<li>新しい kj_dict.zipをダウンロードし、KJ_dict.ymlを新しいものに変えた場合、<br>
+  KJ_dict.yml.orgを消してからuserdict.bat を実行して下さい。 <br>
+<li>これは userdict.batは KJ_dict.yml.org <span class="com">(ユーザデータが入っていない状態の控え) </span>と<br>
+ userdict.txtの内容を足して、KJ_dict.ymlを作るためです。<br>
+ 
+<li> userdict.txtは前回追加した語も含め、ユーザが追加したい語をずっと溜めていることを想定しています。<br>
+
+</ul>
+
+<br>
+<br>
+-->
+
+<h2>辞書に単語を追加する方法 (直接ymlに追加)</h2>
+<ul>
+<li>UTF-8のテキストを操作できる環境をお持ちの場合は、<br>
+KJ_dict.yml に直接データを加えて、<br>
+suffix arrayを再作成しても構いません。<br>
+<br>
+<li>KJ_dict.yml編集後、以下のコマンドを打つ。
+<pre>
+make_array.exe KJ_dict.yml
+
+make_array.exe KJ_dict.yml key1:word1:pronun1 KJ_dict.yml.kr
+make_array.exe KJ_dict.yml key2:word2:pronun2 KJ_dict.yml.jp
+
+make_array.exe KJ_dict.yml parts1 KJ_dict.yml.krparts
+make_array.exe KJ_dict.yml key:word KJ_dict.yml.small CheckCost
+</pre>
+<p>
+
+<li>key1: にハングル，key2: に対応する日本語を書きます。<br>
+読みであるとか，字母の要素など他にいろいろ項目がありますが，<br>
+key1,key2以外は，なくても構いません。<br>
+<br>
+
+<li>make_array.exe はtoolフォルダの下にあります。<br>
+<br>
+
+</ul>
+
+<hr noshade>
+  <div class="topicpathL">
+  <a href="index.html" class="nodecoration">top</a>  &gt; 
+  <a href="pw.html" class="nodecoration">パワーユーザ向けのお知らせ</a>  &gt; 
+  ユーザ辞書
+  </div>
+
+<br>
