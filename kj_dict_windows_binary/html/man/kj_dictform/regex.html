@@ -1,0 +1,92 @@
+﻿<html>
+<head>
+<title>正規表現検索</title>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="../../../dict.css" rel=stylesheet type=text/css>
+</head>
+
+<body>
+<h1>正規表現検索</h1>
+<p>
+実験的に一部の正規表現検索をサポートしています。<br>
+<br>
+使用できるのは以下の文字です。<br>
+. + ? * [ ] {}<br>
+<br>
+正規表現を指定した場合は、<br>
+完全一致・前方一致・後方一致・部分一致の条件は無視します。<br>
+<br>
+<br>
+<br>
+
+
+<h2>～ではじまって～で終わる</h2>
+<p>
+<h3></h3>
+<p>
+「.*」は何でも良いの意味になります。<br>
+例えば「し.*けん」の場合、「し」で始まって「けん」で終わる語です。<br>
+「.*」は無しの意味もあるので「しけん」もマッチします。<br>
+<br>
+たぶん一番有用なのはこの形と思います。<br>
+<br>
+
+<img src="img/regex01.png">
+<br>
+<br>
+
+正規表現に関しては、他の詳しいページを参照して下さい。<br>
+<a href="http://msdn.microsoft.com/library/ja/default.asp?url=/library/ja/script56/html/jsgrpregexpsyntax.asp">正規表現の構文(MSDN)</a> など<br>
+<br>
+<br>
+いくつか代表的なものを示します。<br>
+.  &nbsp;&nbsp;&nbsp;&nbsp;   任意の 1 文字<br>
+*  &nbsp;&nbsp;&nbsp;&nbsp;   0回以上の繰り返し<br>
++  &nbsp;&nbsp;&nbsp;&nbsp;   1回以上の繰り返し<br>
+<br>
+
+<h2>[ ]指定</h2>
+<p>
+ [ ] で囲むとその中の文字のどれかであればマッチします。<br>
+ "[はきじ]けん"の場合、 1文字目が「は」「き」「じ」のいずれかで，<br>
+ "けん"で終わる単語にマッチします。<br>
+（"はけん"，"きけん"，"じけん" のどれかですね）<br>
+<br>
+<br>
+また [ ] の中に書いた"-"は範囲を示します。<br>
+ "[か-こ].+けん"の場合、"か～こ"で始まり（か行の文字），<br>
+ 間に任意の 1 文字があり，<br>
+ "けん"で終わる単語を表示します。<br>
+<img src="img/regex_bracket2.png">
+
+<br>
+<br>
+<br>
+<h2>制限事項</h2>
+<p>
+<!--
+・以上の正規表現を互いに組み合わせて使用する事はできません。<br>
+ たとえば 「 あ[さ-す]*ん 」 などは使えません。<br>
+<br>
+-->
+・正規表現検索は速度が非常に遅いです。<br>
+<br>
+・まだ調整中のため、おかしな検索結果になる事が多々あります(バグあります)。<br>
+<br>
+<br>
+
+<h2>補足事項</h2>
+<p>
+アルファベット指定の検索でも使用できます。<br>
+<img src="img/regex02.png"><br>
+<br>
+<br>
+もちろん、ハングル指定の検索でも使用できます。<br>
+<img src="img/regex03.png"><br>
+<br>
+<br>
+
+<br>
+</body>
+</html>
+
