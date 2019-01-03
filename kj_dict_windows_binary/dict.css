@@ -1,0 +1,107 @@
+﻿@charset 'utf-8';
+
+body {
+    background-color: white ;
+    font-size: 90% ;
+    font-family: "メイリオ", "ヒラギノ角ゴ Pro W3", sans-serif;
+}
+
+
+pre{
+  margin: 1em 0;
+  MARGIN-RIGHT: 10em;
+  MARGIN-left : 5em;
+  padding: 0.5em;
+  border-color: #666666;
+  border-width: 1px;
+  border-style: dashed;
+}
+
+h1{
+   font-size: 180%;
+   font-weight: normal;
+   font-family: Georgia, "Time New Roman";
+   padding: 0.1em;
+   border-color: #555;
+   border-width: thin;
+   border-style: none none solid none;
+   margin-bottom:  0px  
+}
+
+H2{
+   font-size: 140%;
+   font-weight: normal;
+   margin-right: 5em; 
+   border-right: silver 0px solid; 
+   padding-right: 0.18em; 
+   border-bottom: silver 0px solid; 
+   border-top: silver 1px solid; 
+   padding-left: 0.18em; 
+   text-indent: 0.5em; 
+   padding-top: 0.18em; 
+}
+
+h3{
+ font-size: 110%;
+ border-right: gray 0px solid; 
+ padding-right: 0.1em; 
+ border-top: gray 0px solid; 
+ padding-left: 0.7em; 
+ padding-bottom: 0.0em; 
+ margin-bottom: 0.0em; 
+ border-left: gray 0px solid; 
+ color: #334433; text-indent: 0.25em; 
+ padding-top: 0.1em; 
+ font-weight:bold;
+}
+
+dl { margin-left: 1.5em;}
+dd { margin-left: 0.0em;}
+dt { font-weight: bold; color: #444488;}
+
+p{ padding-left: 2.0em ;  
+   line-height:1.5em ;  
+  /* margin-top: 0.3em;      上とつめる */
+}
+p.noindent { text-indent: 0em;}
+
+
+
+a:link { color: #003366 ;}
+a:visited { color: #666; }
+a:active {  color: #ff4422 }
+a:hover {
+    background: #ffeecc ;
+    color: #006633  
+}
+a:unknown { color: #ff4422 }
+a.nodecoration{text-decoration:none; }
+
+img { border-style: none; }
+
+ul { line-height:1.6em ;  }
+li { }
+
+td {  font-size: 90% ; }
+
+.q{font-size:12pt; color:teal; font-weight:bold;}
+.cmd{font-size:11pt; color:blue; font-weight:normal;}
+.syntax{font-size:13pt; font-weight:bold;}
+.com{color:gray; font-size:9pt; line-height:18px ;  }
+.update{ font-size:9pt; color:#c4a995;}
+
+.topicpathR{ font-size:8pt; color:olive; text-align:right}
+.topicpathL{ font-size:8pt; color:olive;  }
+
+#com{
+    font-size:9pt; 
+    color:#838669;
+    font-weight:normal;
+    font-family: Georgia, "Time New Roman";
+}
+#update{ 
+    font-size:9pt; 
+    color:#c4a995;
+    font-weight:normal;
+    font-family: sans-serif ;
+}

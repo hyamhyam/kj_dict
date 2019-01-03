@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<KJ_form_Setting xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <withPronunciation>false</withPronunciation>
+  <PronunciationType>2</PronunciationType>
+  <TargetLang>1</TargetLang>
+  <CultureName>ja-JP</CultureName>
+  <debugInfo>false</debugInfo>
+  <except9999>false</except9999>
+  <except8888>true</except8888>
+  <ClipboardView>false</ClipboardView>
+  <CompactForm>false</CompactForm>
+  <FormSize>
+    <Width>306</Width>
+    <Height>415</Height>
+  </FormSize>
+  <CompactFormSize>
+    <Width>226</Width>
+    <Height>330</Height>
+  </CompactFormSize>
+  <SettingFileName>KJ_dictform_setting.xml</SettingFileName>
+</KJ_form_Setting>
